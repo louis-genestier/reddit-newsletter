@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Reddit Newsletter</title>
+</head>
+<body>
+  <h2>Reddit Newsletter</h2>
+  {{#each subreddits}}yarn add pino
+    <h3>{{this.name}}</h3>
+    <ul>
+      {{#each this.posts}}
+        <li>
+          <a href="https://www.reddit.com{{this.data.permalink}}">{{this.data.title}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</body>
+</html>
